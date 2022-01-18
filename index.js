@@ -3,12 +3,49 @@ getInitData()
 
 function getInitData() {
   state = rawdata
-  randerData()
+  randerData(state)
 }
 
-function randerData() {
-  let productsForRander = ''
+function cateHandler() {
+  const cateId = document.getElementById('cateSelect').value
+  console.log(cateId)
+  state = []
+  for(let product of rawdata) {
+		if(product.categoryId == cateId || cateId == "0") {
+			state.push(product)
+		}
+	}
+  randerData(state)
+} 
+
+function priceHandler() {
+  const priceRange = document.getElementById('priceSelect').value
+  console.log(priceRange)
+  // let innerState = state
+  let filteredProds = []
   for(let product of state) {
+		if(priceRange == 0) {
+			filteredProds = state;
+		}
+		if(product.price <= 100 && priceRange == 100) {
+			filteredProds.push(product);
+		}
+		if(product.price > 100 && product.price <= 500 && priceRange == 500) {
+			filteredProds.push(product);
+		}
+		if(product.price > 500 && product.price <= 1000 && priceRange == 1000) {
+			filteredProds.push(product);
+		}
+		if(product.price > 1000 && priceRange == 1001) {
+			filteredProds.push(product);
+		}
+	}
+  randerData(filteredProds)
+}
+
+function randerData(data) {
+  let productsForRander = ''
+  for(let product of data) {
     if(product.productMedia[0] && product.productMedia[0].url) {
       const imgUrl = "https://storage.googleapis.com/luxe_media/wwwroot/" + product.productMedia[0].url
       const urlParam = "./detail.html?prodId=" + product.prodId
