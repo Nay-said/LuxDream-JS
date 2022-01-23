@@ -7,9 +7,8 @@ function getInitData() {
 }
 
 function cateHandler() {
-  const cateId = document.getElementById('cateSelect').value
-  console.log(cateId)
   state = []
+  const cateId = document.getElementById('cateSelect').value
   for(let product of rawdata) {
 		if(product.categoryId == cateId || cateId == "0") {
 			state.push(product)
@@ -21,7 +20,6 @@ function cateHandler() {
 function priceHandler() {
   const priceRange = document.getElementById('priceSelect').value
   console.log(priceRange)
-  // let innerState = state
   let filteredProds = []
   for(let product of state) {
 		if(priceRange == 0) {
