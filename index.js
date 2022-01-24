@@ -60,3 +60,25 @@ function randerData(data) {
   }
   document.getElementById('prodList').innerHTML = productsForRander;
 }
+
+function asc() {
+  state.sort((A, B) => {
+    const valueA = A.price
+    const valueB = B.price
+    if (valueB < valueA) return 1
+    else if (valueB > valueA) return -1
+    else return 0
+  })
+  randerData(state)
+}
+
+function desc() {
+  state.sort((A, B) => {
+    const valueC = A.price
+		const valueD = B.price
+		if (valueC < valueD) return 1
+		else if (valueC > valueD) return -1
+		else return 0
+  })
+  randerData(state)
+}
