@@ -9,7 +9,7 @@
 <body>
 	<nav class="navbar navbar-light bg-light">
 		<div id="nav-wrap">
-			<a id="logo" class="nav-link text-dark p-0" href="./index.html">
+			<a id="logo" class="text-dark p-0" href="./index.html">
 				Luxe Dream Event Hire
 			</a>
 		</div>
@@ -47,11 +47,13 @@
 			<div id="price-range" class="col-12 col-lg-5 col-xl-3 mt-2 mt-xl-0">
 				<p>Price</p>
 				<select onchange="priceHandler()" id="priceSelect" class="form-control">
-					<option value="0">All</option>
-					<option value="100">0 - 100</option>
-					<option value="500">101 - 500</option>
-					<option value="1000">501 - 1000</option>
-					<option value="1001">> 1000</option>
+					<optgroup>
+						<option value="0">All</option>
+						<option value="100">0 - 100</option>
+						<option value="500">101 - 500</option>
+						<option value="1000">501 - 1000</option>
+						<option value="1001">> 1000</option>
+					</optgroup>
 				</select>
 			</div>
 

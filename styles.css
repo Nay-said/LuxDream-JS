@@ -4,6 +4,7 @@
 }
 #logo {
   font-weight: bold;
+  text-decoration: none;
 }
 main {
   width: 88%;
