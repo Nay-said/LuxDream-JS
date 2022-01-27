@@ -15,9 +15,6 @@ main {
 #filter-group p {
   margin-bottom: 10px;
 }
-select, button {
-  vertical-align: top;
-}
 #wrap {
   margin-top: 25px;
 }
@@ -54,9 +51,17 @@ img {
 }
 
 @media screen and (max-width: 576px) {
+  #nav-wrap {
+    width: 90%;
+  }
   main {
-    width: 98%;
-    padding-left: 10px;
+    width: 90%;
+  }
+  #filter-group {
+    margin-top: 10px;
+  }
+  #detail-wrap {
+    width: 100%;
   }
   #prodTitle {
     margin-top: 20px;
