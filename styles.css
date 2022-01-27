@@ -70,7 +70,7 @@ img {
   #desc {
     margin-top: 20px;
   }
-  optgroup {
+  optgroup, option {
     font-size: 12px !important;
   }
 }
