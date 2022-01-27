@@ -61,9 +61,16 @@ img {
     margin-top: 10px;
   }
   #detail-wrap {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
   #prodTitle {
     margin-top: 20px;
+  }
+  #desc {
+    margin-top: 20px;
+  }
+  optgroup {
+    font-size: 12px !important;
   }
 }
