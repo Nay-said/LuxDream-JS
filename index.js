@@ -48,9 +48,11 @@ function randerData(data) {
       const imgUrl = "https://storage.googleapis.com/luxe_media/wwwroot/" + product.productMedia[0].url
       const urlParam = "./detail.html?prodId=" + product.prodId
       const viewTemplate = `
-        <div class="col-12 col-md-2 mb-3">
+        <div class="col-12 col-md-6 col-lg-3 mb-3">
           <a href="${urlParam}">
-            <img src="${imgUrl}">
+            <div id="prod-img-wrap">
+              <img src="${imgUrl}">
+            </div>
             <p id="title">${product.title}</p>
             <p id="price">$ ${product.price}</p>
           </a>
